@@ -1,1 +1,1 @@
-# digital-labs-mail-service
+# digital-labs-bff-service
