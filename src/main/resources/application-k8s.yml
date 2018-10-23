@@ -1,0 +1,4 @@
+api: 
+  mail: 
+    services:
+      url: http://digital-labs-mail-service:8090

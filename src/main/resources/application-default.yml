@@ -1,0 +1,4 @@
+api:
+  mail: 
+    services:
+      url: http://localhost:8090
