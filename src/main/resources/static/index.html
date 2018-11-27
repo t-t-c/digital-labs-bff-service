@@ -27,19 +27,39 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
-                <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KSQQKD5');</script>
+		<!-- End Google Tag Manager -->
+
+		<!-- Page hiding snippet (recommended)  -->
+		<style>.async-hide { opacity: 0 !important} </style>
+		<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+		h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+		(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+		})(window,document.documentElement,'async-hide','dataLayer',4000,
+		{'GTM-KRKK3Z4':true});</script>
+				
+        <!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126824510-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-126824510-1');
+		  
+		  gtag ( 'config', 'UA-126824510-1', { 'optimize_id': 'GTM-KRKK3Z4'});
 		</script>
-		        
+		
     </head>
 
     <body data-spy="scroll" data-offset="80">
+    		<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSQQKD5"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
         
         <!-- nav -->
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -55,7 +75,7 @@
                     <!-- <a class="navbar-brand" href="index.html">
 					Digital Labs for X
 					</a> -->
-					<a class="navbar-brand logo-white" href="#">
+					<a id="logo" class="navbar-brand logo-white" href="#">
 					<img src="img/logo.png" alt="">
 					</a>
 					<a class="navbar-brand logo-black" href="#">
@@ -66,21 +86,21 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active">
-                            <a href="#video">Home</a>
+                            <a id="gnb_home" href="#video">Home</a>
                         </li>
-                        <li><a href="#about">About</a></li>
+                        <li><a id="gnb_about" href="#about">About</a></li>
                         <li class="dropdown">
-                            <span class="dropdown-toggle" data-toggle="dropdown" role="button">Labs <i class="caret"></i></span>
+                            <span id="gnb_labs" class="dropdown-toggle" data-toggle="dropdown" role="button">Labs <i class="caret"></i></span>
                             <ul class="dropdown-menu">
-                                <li><a href="cloud.html">Cloud</a></li>
-                                <li><a href="data.html">Data</a></li>
-                                <li><a href="blockchain.html">Blockchain</a></li>
-                                <li><a href="ai.html">AI</a></li>
+                                <li><a id="gnb_cloud" href="cloud.html">Cloud</a></li>
+                                <li><a id="gnb_data" href="data.html">Data</a></li>
+                                <li><a id="gnb_blockchain" href="blockchain.html">Blockchain</a></li>
+                                <li><a id="gnb_ai" href="ai.html">AI</a></li>
                             </ul>
                         </li>
-                        <li><a href="#specialists">Specialists</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="https://tech.cloudz-labs.io/" target="_blog">blog</a></li>                        
+                        <li><a id="gnb_specials" href="#specialists">Specialists</a></li>
+                        <li><a id="gnb_contact" href="#contact">Contact</a></li>
+                        <li><a id="gnb_blog" href="https://tech.cloudz-labs.io/" target="_blog">blog</a></li>                        
                     </ul>                    
                 </div>
             </div>
@@ -98,7 +118,7 @@
                 </div>
             </div>
             <div class="embed-responsive embed-responsive-16by9">          
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vgi9sW86cxE?rel=0&amp;autoplay=true&amp;controls=0&amp;modestbranding=1&amp;mute=true&amp;showinfo=0&amp;autohide=0&amp;loop=1&amp;startAt=1&amp;playlist=vgi9sW86cxE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe id="youtubePlayer" class="embed-responsive-item" src="https://www.youtube.com/embed/vgi9sW86cxE?rel=0&amp;autoplay=true&amp;controls=0&amp;modestbranding=1&amp;mute=true&amp;showinfo=0&amp;autohide=0&amp;loop=1&amp;startAt=1&amp;playlist=vgi9sW86cxE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </section>
         
@@ -205,7 +225,7 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
-                                <a href="cloud.html">
+                                <a href="cloud.html" id="cloud_link">
                                     <div class="thumbnail">
                                         <div class="figure">		
                                             <span class="img-icon service-04"></span>
@@ -228,8 +248,8 @@
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-6">	
-                                <a href="data.html">
-                                    <div class="thumbnail">	
+                                <a href="data.html" id="data_link">
+                                    <div class="thumbnail" >	
                                         <div class="figure">		
                                             <span class="img-icon service-06"></span>
                                             <span class="title"><strong>Data</strong></span>
@@ -253,7 +273,7 @@
                             </div>
 
                             <div class="col-md-6 col-sm-6">	
-                                <a href="blockchain.html">
+                                <a href="blockchain.html" id="blockchain_link">
                                     <div class="thumbnail">	
                                             <div class="figure">		
                                                 <span class="img-icon service-05"></span>
@@ -277,8 +297,8 @@
                                 </a>
                             </div> 
                             <div class="col-md-6 col-sm-6">	
-                                <a href="ai.html">
-                                    <div class="thumbnail">	
+                                <a href="ai.html" id="ai_link">
+                                    <div class="thumbnail" >	
                                             <div class="figure">		
                                                 <span class="img-icon service-07"></span>
                                                 <span class="title"><strong>AI</strong></span>
@@ -315,10 +335,10 @@
                         <div class="carousel slide" id="review" data-ride="carousel">                            
                             <div class="icon"><i class="fa fa-quote-right" aria-hidden="true"></i></div>
                             <ol class="carousel-indicators">
-                                <li data-target="#review" data-slide-to="0"></li>
-                                <li data-target="#review" data-slide-to="1"></li>
-                                <li data-target="#review" data-slide-to="2"></li>
-                                <li data-target="#review" data-slide-to="3" class="active"></li>
+                                <li id="testimonial1" data-target="#review" data-slide-to="0"></li>
+                                <li id="testimonial2" data-target="#review" data-slide-to="1"></li>
+                                <li id="testimonial3" data-target="#review" data-slide-to="2"></li>
+                                <li id="testimonial4" data-target="#review" data-slide-to="3" class="active"></li>
                             </ol>
                             <div class="carousel-inner" role="listbox">
                                 <div class="item">
@@ -364,7 +384,7 @@
                             <p><strong>Digital Labs for X 의 특별한 교육을 원하세요?</strong></p>
                         </div>
                         <div class="col-md-4">
-                            <a href="#contact" class="btn">지금 연락주세요.</a>
+                            <a id="contact1_btn" href="#contact" class="btn">지금 연락주세요.</a>
                         </div>
                     </div>    
                 </div>
@@ -710,7 +730,7 @@
 							<!-- <a class="navbar-brand logo-white" href="#">
 							<img src="img/logo.png" alt="">
 							</a> -->
-							<a class="navbar-brand logo-black" href="#">
+							<a id="ft_logo" class="navbar-brand logo-black" href="#">
 							<img src="img/logo-2.png" alt="">
 							</a>
                             <p>
@@ -734,27 +754,27 @@
                         <div class="footer-col">
                             <ul>
                                 <li>
-                                    <a href="#about">About</a>
+                                    <a id="ft_about" href="#about">About</a>
                                 </li>
                                 <li>
-                                    <a href="#labs">
+                                    <a id="ft_labs" href="#labs">
                                         Labs <i class="caret"></i>
                                     </a>
                                     <ul>
-                                        <li><a href="cloud.html">Cloud</a></li>
-                                        <li><a href="data.html">Data</a></li>
-                                        <li><a href="blockchain.html">Blockchain</a></li>
-                                        <li><a href="ai.html">AI</a></li>
+                                        <li><a id="ft_cloud" href="cloud.html">Cloud</a></li>
+                                        <li><a id="ft_data" href="data.html">Data</a></li>
+                                        <li><a id="ft_blockchain" href="blockchain.html">Blockchain</a></li>
+                                        <li><a id="ft_ai" href="ai.html">AI</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#specialists">Specialists</a>
+                                    <a id="ft_specials" href="#specialists">Specialists</a>
                                 </li>
                                 <li>
-                                    <a href="#contact">Contact</a>
+                                    <a id="ft_contact" href="#contact">Contact</a>
                                 </li>
                                 <li>
-                                    <a href="https://tech.cloudz-labs.io/" target="_blog">Blog</a>
+                                    <a id="ft_blog" href="https://tech.cloudz-labs.io/" target="_blog">Blog</a>
                                 </li>
                             </ul>
                         </div>                        
@@ -775,7 +795,7 @@
         </footer>
 
         <!-- back-to-top -->
-        <a class="cd-top js-cd-top">
+        <a id="top" class="cd-top js-cd-top">
             back-top-top
         </a>
 
