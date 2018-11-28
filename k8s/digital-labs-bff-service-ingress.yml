@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: digital-labs-bff-service-ingress
+spec:
+  tls:
+  - hosts:
+    - digitallabs.skcc.com
+    - dtlabs.skcc.com
+    secretName: dtlabs-ssl-secret
+  rules:
+  - host: digitallabs.skcc.com
+    http:
+      paths: 
+      - path: /
+        backend:
+          serviceName: digital-labs-bff-service
+          servicePort: 8080
+  - host: dtlabs.skcc.com
+    http:
+      paths: 
+      - path: /
+        backend:
+          serviceName: digital-labs-bff-service
+          servicePort: 8080
