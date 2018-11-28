@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: digital-labs-bff-service
-        image: techtrainigcenter/digital-labs-bff-service:1.0
+        image: registry.au-syd.bluemix.net/ttc-registry/digital-labs-bff-service:1.0
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -33,3 +33,5 @@ spec:
           limits: 
             memory: "1Gi" 
             cpu: "1" 
+      imagePullSecrets:
+      - name: ttc-reg-secret2
